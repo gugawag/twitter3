@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  nome: string;
+  idade: number;
+
+  constructor() {
+    this.nome = 'Coloque aqui seu nome';
+    this.idade = 20;
+    console.log(`O sistema está sendo executado por ${this.nome}
+       com idade ${this.idade.toString()}`);
+  }
+
+  getNome() {
+    return this.nome;
+  }
 }

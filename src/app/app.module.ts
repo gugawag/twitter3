@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {PostsModule} from './posts/posts.module';
 import {MaterialModule} from './material/material.module';
+import {FirestoreModule} from './firestore/firestore.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {MaterialModule} from './material/material.module';
     BrowserModule,
     AppRoutingModule,
     PostsModule,
-    MaterialModule
+    MaterialModule,
+    FirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

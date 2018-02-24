@@ -11,6 +11,8 @@ import {Observable} from 'rxjs/Observable';
 export class PostsComponent implements OnInit {
 
   posts: Observable<Post[]>;
+  postsSabadoTematico: Observable<Post[]>;
+
   post = new Post('');
 
   constructor(private postsService: PostsService) {
@@ -18,6 +20,7 @@ export class PostsComponent implements OnInit {
 
   ngOnInit() {
     this.posts = this.postsService.getPosts();
+    this.postsSabadoTematico = this.postsService.getPostsSabadoTematico();
   }
 
   enviarPost() {
